@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oxanium:wght@200..800&display=swap');
+
 .container{
   display: flex;
   justify-content: center;
@@ -38,12 +40,27 @@ button{
 }
 
 .profile {
-  width: 50vw;
-  box-shadow: 1px 1px 10px green;
+  min-width: 100vw;
+  box-shadow: 1px 1px 10px rgb(188, 212, 188);
+  padding: 3%;
+  font-family: "Oxanium", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 .profli{
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding: 2% 5%;
+  text-align: start;
+  border-bottom: 1px sloid grey;
+}
+
+@media (min-width:700px) {
+  .profile{
+    min-width: 50vw;
+  }
+
+  
 }
