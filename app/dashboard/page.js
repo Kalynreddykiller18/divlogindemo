@@ -30,10 +30,10 @@ export default function Dashboard() {
 
   return (
     <div style={{width:'80%'}}>
-      <h1>Dashboard</h1>
+      <h1 style={{color:"red",fontSize:"1.89rem",margin:"10px 0"}}>Dashboard</h1>
       {user ? (
         <>
-          <h2>Welcome, {user.name}</h2>
+          <h2 style={{marginBottom:"10px"}}>Welcome, {user.name}</h2>
           <button>
             <Link href='/profile'>View Profile</Link>
           </button>
@@ -44,7 +44,7 @@ export default function Dashboard() {
             value={searchQuery} 
             onChange={(e) => setSearchQuery(e.target.value)} 
           />
-          <table>
+          <table style={{width:"100%"}}>
             <thead>
               <tr>
                 <th>Full Name</th>

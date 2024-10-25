@@ -17,10 +17,9 @@ const UpdateProfile = () => {
 
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
-  const [token, setToken] = useState(''); // Use state for token
+  const [token, setToken] = useState('');
 
   useEffect(() => {
-    // Load user data into form when user object changes
     if (user) {
       setFormData({
         name: user.name,
@@ -29,7 +28,6 @@ const UpdateProfile = () => {
       });
     }
 
-    // Fetch token only once on component mount
     const storedToken = localStorage.getItem('accessToken');
     if (storedToken) {
       setToken(storedToken);
@@ -53,7 +51,7 @@ const UpdateProfile = () => {
         }
       });
 
-      updateUser(formData); // Update user context
+      updateUser(formData);
       alert('Profile updated successfully!');
       router.push('/profile'); 
     } catch (err) {

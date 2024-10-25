@@ -9,15 +9,15 @@ export default function Profile() {
 
   return (
     <div>
-      <h1>Profile Page</h1>
+      <h1 style={{color:"red",fontSize:"1.89rem",margin:"10px 0"}}>Profile Page</h1>
       {user ? (
-        <>
-          <h2>Name: {user.name}</h2>
-          <h3>Mobile No: {user.mobile_no}</h3> 
-          <h3>WhatsApp No: {user.whatsapp_no}</h3>
-          <h4>{user.email && user.email}</h4> 
+        <div className='profile'>
+          <div className='profli'><span>Name:</span> <span>{user.name}</span></div>
+          <div className='profli'><span>Mobile No:</span> <span>{user.mobile_no}</span></div>
+          <div className='profli'><span>WhatsApp No:</span> <span>{user.whatsapp_no }</span></div>
+          <div className='profli'>Email: <span>{user.email ? user.email : <>Mail id not exits</>}</span></div>
           <button><Link href='/updateprofile'>Update Profile</Link></button>
-        </>
+        </div>
       ) : (
         <p>You are not logged in <Link href='/login'>Go to Login </Link></p>
       )}

@@ -15,7 +15,7 @@ export default function Navigation() {
 
     return (
         <nav className="navigation">
-            <span><Link href='/dashboard'>BITS</Link></span>
+            <span style={{fontSize:"2.16rem"}}><Link href='/dashboard'>BITS</Link></span>
             {user ? (
                 <button onClick={handleLogout}>LOGOUT</button>
             ) : (

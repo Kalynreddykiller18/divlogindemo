@@ -27,8 +27,23 @@ nav{
   padding: 10px;
 }
 
+.container input::placeholder{
+  color: black;
+}
+
 button{
   color: blue;
   background-color: burlywood;
   padding: 5px 10px;
+}
+
+.profile {
+  width: 50vw;
+  box-shadow: 1px 1px 10px green;
+}
+
+.profli{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }

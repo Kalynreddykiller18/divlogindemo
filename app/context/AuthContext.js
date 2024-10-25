@@ -7,14 +7,11 @@ const AuthContext = createContext();
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
 
-  // Login function to set user data
   const login = (userData) => {
     setUser(userData.Business_Owner);
-    // Optionally store token in local storage
-    localStorage.setItem('accessToken', userData.access); // Assuming userData contains accessToken
+    localStorage.setItem('accessToken', userData.access); 
   };
 
-  // Update user information
   const updateUser = (updatedData) => {
     setUser((prevUser) => ({
       ...prevUser,
@@ -22,10 +19,9 @@ export function AuthProvider({ children }) {
     }));
   };
 
-  // Logout function to clear user data
   const logout = () => {
     setUser(null);
-    localStorage.removeItem('accessToken'); // Clear token on logout
+    localStorage.removeItem('accessToken');
   };
 
   return (
