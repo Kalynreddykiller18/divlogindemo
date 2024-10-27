@@ -1,10 +1,11 @@
-import Link from 'next/link'
+import HomePage from "./homepage"
 
 export default function Home(){
+
   return (
     <div>
-    <h1>Welocome to DITS</h1>
-    <li><Link href='/login' >Login</Link></li>
+      <h1>Welocome to DIV International Solutions</h1>
+      <HomePage />
     </div>
   )
 }

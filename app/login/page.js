@@ -9,6 +9,8 @@ export default function Login() {
   const [name, setName] = useState('');
   const [pass, setPass] = useState('');
   const [error, setError] = useState('');
+
+  const {user} = useAuth()
   
   const router = useRouter();
   const { login } = useAuth();
@@ -36,6 +38,7 @@ export default function Login() {
   };
 
   return (
+    user ? <h3>you are already logged in</h3> :
     <form>
       <input
         placeholder="Username"
